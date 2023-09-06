@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #1111;
+    background-image: url(./images/itachi.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+a:hover{
+    color: orangered;
+    transition: 0.3s all;
+    border-bottom: 3px solid orangered;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    color: orangered;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.toggle-btn{
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action-btn{
+    color: #fff;
+    background-color: orangered;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8 rem;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+
+.action-btn:hover{
+    color: #fff;
+    scale: 1.05;
+    transition: all 1s;
+}
+
+/*dropdown*/
+
+.dropdown{
+    position: absolute;
+    background:rgba(225, 225, 225, 0.1);
+    width: 90%;
+    height: 0;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 0.275);
+}
+
+.dropdown.open{
+    height: 240px;
+}
+
+
+.dropdown li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/*responsive*/
+
+@media (max-width:992px){
+  .navbar .links,
+  .navbar .action-btn{
+    display: none;
+  }
+
+
+  .toggle-btn{
+    display: block;
+  }
+
+
+
+}
